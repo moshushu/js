@@ -1,3 +1,4 @@
-import age from './model.js'
 
+let age = 'kunkun';
+export default age;
 console.log('index.js',age)
