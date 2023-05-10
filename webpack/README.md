@@ -1,5 +1,22 @@
 # webpack
 * webpack 是一个静态模块打包器，当webpack处理应用程序时，会将所有这些模块打包成一个或多个文件
+* webpack 安装
+```
+npm install webpack webpack-cli --save-dev
+```
+
+* 新建webpack配置文件， webpack.config.js
+```
+  const path = require('path');
+
+  module.exports = {
+    entry: './src/index.js',
+    output: {
+      filename: 'main.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+  };
+```
 
 ## loader， babel在webpack中使用，引用babel-loader实现
 * npm install --save-dev babel-loader@8.1.0 @babel/core@7.11.0 @babel/preset-env@7.11.0
