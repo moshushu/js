@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1、Fetch是什么？
+    // Fetch也是前后端通信的一种方式
+    // Fetch是Ajax的一种替代方案，是 XMLHttpRequest 的升级版，它也是基于Promise的
+    const url = "https://www.imooc.com/api/http/search/suggest?words=js"
+    fetch(url,{
+      method: 'post',
+      // body 没办法传对象，需要stringify一下
+      // body: '',
+      // headers: {}
+      // mode 跨域
+      // mode: 'cors'
+    }).then(res => {
+      // body/bodyUsed
+      // body 只能读取一次，读过之后bodyUsed = true，就不让再读了
+      if (res.ok){
+        // 不管是res.json 或者是 res.text 得到的都是promise对象，需将它返回再处理
+        // 返回的数据为json的就使用json
+        return res.json()
+        // 返回的数据为字符串的就使用text
+        // return res.text()
+      }
+    }).then(data => {
+      console.log(data)
+    }).catch(err => {
+      console.log(err)
+    })
+  </script>
+</body>
+
+</html>

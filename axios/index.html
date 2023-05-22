@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    // axios 是一个基于Promise的HTTP库，或者说是一个基于Promise的第三方Ajax库
+    // http://www.axios-js.com/zh-cn/docs   中文文档
+
+    const url = "https://www.imooc.com/api/http/search/suggest?words=js"
+    axios(url,{
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      params: {
+        username: 'alex'
+      },
+      // json格式对应的Content-Type为 ‘application/json’
+      // data: {
+      //   age: 18,
+      //   sex: 'male',
+      // }
+      
+      // 字符串格式对应的Content-Type为 'application/x-www-form-urlencoded'
+      data: 'age=18&sex=male',
+    }).then(res => {
+      console.log(res)
+    }
+    ).catch(err => {
+      console.log(err)
+    })
+  </script>
+</body>
+</html>
