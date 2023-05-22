@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // 使用CORS跨域的过程
+      // 1、浏览器发送请求
+      // 2、后端在响应头中添加 Access-Control-Allow-Origin 头信息。* 表示允许任何域，也可指定特定的域
+      // 3、浏览器接收到响应
+      // 4、如果是同域下的请求，浏览器不会额外做什么，这次前后端通信就完成了
+      // 5、如果是跨域请求，浏览器会从响应头中查找是否允许跨域访问
+      // 6、如果允许跨域，通许完成
+      // 7、如果没找到，或者不包含想要的跨域的域名，就会丢弃响应的结果
+
+      // CORS的兼容性
+      // IE10及以上版本的浏览器可以正常使用CORS，如果需要考虑兼容性的问题，可以使用JSONP
+    </script>
+</body>
+</html>

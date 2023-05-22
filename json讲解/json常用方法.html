@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // json的常用方法：JSON.parse() 和 JSON.stringify()
+
+    // 1、JSON.parse() 将字符串解析为对象或者数组形式等
+    console.log(JSON.parse(`{"name": "","ss": "","arr": ["1","2","2"]}`))
+    // 2、JSON.stringify() 将对象或者数组转换成字符串
+
+    let obj = {
+      name: "",
+      ss: "",
+      arr: ["1", "2", "2"]
+    }
+    console.log(JSON.stringify(obj))
+  </script>
+</body>
+
+</html>

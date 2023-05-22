@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1、JSONP的原理：
+    // 利用script标签跨域不会被浏览器阻止的bug（机制）
+    // JSONP主要就是利用script标签，加载跨域文件
+
+    // 2、使用JSONP实现跨域
+    // 需要后端准备JSONP接口
+    // eg: https://www.imooc.com/api/http/jsonp?callback=response
+    const response = data =>{
+      console.log(data)
+    };
+    // url 中的 callback 回调函数 对应自己定义的接收函数
+  </script>
+  <script src="https://www.imooc.com/api/http/jsonp?callback=response"></script>
+</body>
+</html>

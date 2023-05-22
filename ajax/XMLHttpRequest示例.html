@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ajax的使用示例
+    // 1、创建xhr对象
+    const xhr = new XMLHttpRequest()
+
+    // 2、准备发送请求
+    xhr.open()
+
+    // 3、发送请求
+    // send() 参数是通过请求体携带数据
+    xhr.send()
+
+    // 最好将监听事件，在open前就监听
+    // 4、监听事件，处理响应
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== 4){
+        return;
+      }
+
+      //  判断http状态码code
+      // xhr.status： http code ，存储响应的状态码
+      if ((xhr.status >= 200) & (xhr.status < 300) || xhr.status === 304){
+        console.log("正常使用响应数据")
+        // 响应内容
+        console.log(xhr.responseText)
+      }else{
+        
+      }
+    };
+    // readystatechange 事件监听readyState 这个状态的变化
+    // 它的值从 0 ～ 4 ，一个5个状态
+    // 0: 未初始化，还未调用open()
+    // 1: 启动。已经调用open()，但尚未调用send()
+    // 2: 发送，已经调用send(),但尚未接收到响应
+    // 3: 接收，已经接收到部分响应数据
+    // 4: 完成，以及接收到全部数据，而且已经可以在浏览器中使用了
+
+  </script>
+</body>
+</html>
